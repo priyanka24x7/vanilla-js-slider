@@ -1,11 +1,18 @@
-body{margin:0; padding:0;}
+body{margin:0; padding:0; background: #575757;}
 /* Parent wrapper to carousel. Width can be changed as needed. */
 .carousel-wrapper {
     overflow: hidden;
     width: 90%;
+    height: 100%;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
+  button{
+    outline: 0;
+    border: 0;
+  }
   /* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
   .carousel-wrapper * {
     box-sizing: border-box;
@@ -29,6 +36,8 @@ body{margin:0; padding:0;}
     padding: 1rem 4rem;
     z-index: 100;
     transition: transform .5s, opacity .5s, z-index .5s;
+    height: 370px;
+    object-fit: cover;
   }
   
   /* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
