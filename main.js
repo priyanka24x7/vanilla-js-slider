@@ -21,9 +21,13 @@
   })
   
   prev.addEventListener('click', function() {
-    // activeIndex--;
-    // if(mainWrapper.length < activeIndex ){
-    //     mainWrapper[activeIndex].classList.add('active');
-    // }    
+    mainWrapper[activeIndex].classList.remove('active');
+    if(activeIndex === 0 ){
+        activeIndex = mainWrapper.length-1;
+        mainWrapper[activeIndex].classList.add('active');
+    } else {
+        activeIndex--;
+        mainWrapper[activeIndex].classList.add('active');
+    }    
   })
 })();
